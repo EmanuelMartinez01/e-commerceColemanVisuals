@@ -1,7 +1,7 @@
-import "./Navigation.css"
+import "./NavBar.css"
 
 
-const Navigation = () => {
+const NavBar = () => {
     return( 
         <nav>
             <ul>
@@ -14,3 +14,4 @@ const Navigation = () => {
         </nav>
     )
 }
+
