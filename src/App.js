@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 // Components
-import NavBar from "./components/NavBar/NavBar.js";
+import NavBar from "./NavBar";
 
 class App extends Component {
 	render () {
