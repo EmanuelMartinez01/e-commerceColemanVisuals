@@ -1,4 +1,5 @@
-import "./NavBar.css"
+import React from 'react';
+import './NavBar.css';
 
 
 const NavBar = () => {
@@ -7,7 +8,7 @@ const NavBar = () => {
             <a>Home</a>
             <a>section</a>
         </nav>
-    )
+    );
 }
 
 export default NavBar;
