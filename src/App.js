@@ -1,5 +1,6 @@
 import './App.css';
 
+// Components
 import NavBar from "./components/NavBar.js";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 		
 		<div className='App'>
 			<h1>Coleman Visuals</h1>
-			<NavBar></NavBar>
+			<NavBar />
 			<p>Gallery Stocks</p>
 			<p>Fotografo</p>
 		</div>
