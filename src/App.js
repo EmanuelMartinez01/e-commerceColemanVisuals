@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 
 // Components
-import NavBar from "./components/NavBar.js";
+import Header from './components/Header/Header.js';
+import NavBar from './components/NavBar/NavBar.js';
+
 
 class App extends Component {
 	render () {
 		return (
 		<div className='App'>
-			<h1>Coleman Visuals</h1>
+			<Header />
 			<NavBar />
 			<div></div> <hr />
 			<p>Gallery Stocks</p>
