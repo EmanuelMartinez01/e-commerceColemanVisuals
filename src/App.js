@@ -3,7 +3,7 @@ import './App.css';
 
 // Components
 import Header from './components/Header/Header.js';
-import NavBar from './components/NavBar/NavBar.js';
+import NavBar from '../src/components/Navbar/NavBar.js';
 
 
 class App extends Component {
