@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './NavBar.css';
+import CardWidget from '../CardWidget/CardWidget.js';
 
 //Logo 
 import img from '../Navbar/logoColeman.png'
@@ -33,7 +34,12 @@ const NavBar = () => {
                 <li className='nav__item'>
                     <a href="#/" className='nav__link'>Contact</a>
                 </li>
+    
+                <CardWidget />
+                
+                
             </ul>
+            
             <div onClick={navToggle} className={toggleIcon}>
                 <div className='line1'></div>
                 <div className='line2'></div>

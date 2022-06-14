@@ -2,19 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 
 // Components
-
 import NavBar from '../src/components/Navbar/NavBar.js';
+import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
 
 
 class App extends Component {
+	constructor() {
+		super();
+		this.state= {
+			name: 'Diego',
+		};
+	}
+
+
 	render () {
 		return (
 		<div className='App'>
 			
 			<NavBar />
 			<div></div> <hr />
-			<p>Gallery Stocks</p>
-			<p>Fotografo</p>
+			<ItemListContainer greeting='Bienvenidos' intro='Estoy siendo llamado desde una prop' />
+			<p>Fotografo: {this.state.name}</p>
+			
 		</div>
 		);
 	}
