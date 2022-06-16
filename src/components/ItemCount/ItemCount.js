@@ -29,10 +29,10 @@ const onAdd = () => {
 
     return (
         <div className='ItemCount'>
-            <button onClick={handlerCounterUp}>+</button>
-             <p>{counter}</p>
-            <button onClick={handlerCounterMinus}>-</button>
-            <button onClick={onAdd}>Add to Car</button>
+            <button className='btn-count' onClick={handlerCounterUp}>+</button>
+             <p className='celda-count'>{counter}</p>
+            <button className='btn-count' onClick={handlerCounterMinus}>-</button>
+            <button className='btn-count' onClick={onAdd}>Add to Car</button>
         </div>
       
     )
