@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './ItemCount.css';
 
 
-const ItemCount = ({stock, min}) => {
-    const [counter, setcounter] = useState(1);
+const ItemCount = ({stock, min, onAdd}) => {
+    const [counter, setcounter] = useState(min);
 
 
 const handlerCounterUp = () => {
@@ -23,16 +23,13 @@ const handlerCounterMinus = () => {
     
 }
 
-const onAdd = () => {
-    console.log("Estos productos " +  counter)
-}
 
     return (
         <div className='ItemCount'>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
              <p className='celda-count'>{counter}</p>
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
-            <button className='btn-count' onClick={onAdd}>Add to Car</button>
+            <button className='btn-count' onClick={()=>onAdd(counter)}>Add to Car</button>
         </div>
       
     )
