@@ -7,12 +7,15 @@ const ItemList = ({ items }) => {
 
     return (
         <div>
-            {items.map((item, idx) => (
+            {[items].map((item, idx) => (
                 <Item items={item} key={idx} />
             ))}
         </div>
+
     );
 }
+
+
 
 
 
