@@ -9,10 +9,10 @@ import { item } from '../Item/Item';
 const ItemListContainer = (props) => {
 
     useEffect(() => {
-        //llamada api ? 
-        fetch('https://jsonplaceholder.typicode.com/photos')
+        //llamada API 
+        fetch('https://pixabay.com/api/?key=28194686-08704d882809305001daf4fa9&q=yellow+flowers&image_type=photo&pretty=true')
             .then((response) => response.json())
-            .then((json) => (json));
+            .then((json) => console.log(json));
     })
 
     const onAdd = (counter) => {
