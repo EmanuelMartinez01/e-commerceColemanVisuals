@@ -1,13 +1,15 @@
 import React from 'react';
-import './ItemList.css';
+import Item from '../Item/Item.js'
 
 
-const ItemList = ({ item }) => {
+
+const ItemList = ({ items }) => {
 
     return (
-        <div className="card">
-            <h1>Nombre : {item.nombre}</h1>
-            <p>Precio : {item.price}$</p>
+        <div>
+            {items.map((item, idx) => (
+                <Item items={item} key={idx} />
+            ))}
         </div>
     );
 }
