@@ -23,7 +23,7 @@ class App extends Component {
 
 				<NavBar />
 				<div></div> <hr />
-				<ItemListContainer greeting='Bienvenidos' intro='Estoy siendo llamado desde una prop' />
+				<ItemListContainer />
 				<p>Fotografo: {this.state.name}</p>
 
 			</div>
