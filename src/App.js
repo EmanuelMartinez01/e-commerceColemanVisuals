@@ -4,7 +4,7 @@ import './App.css';
 // Components
 import NavBar from '../src/components/Navbar/NavBar.js';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
-
+import { item } from '../src/components/Items/Item.js'
 
 
 class App extends Component {
