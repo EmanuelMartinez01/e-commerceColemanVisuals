@@ -1,26 +1,27 @@
 export const item = [
     {
         id: 1,
-        tittle: "Paisaje",
+        nombre: "Paisaje",
         price: 20,
-        image: ""
+        pictureUrl: ''
     },
     {
         id: 2,
-        tittle: "Vintage",
+        nombre: "Vintage",
         price: 30,
-        image: ""
+        pictureUrl: ''
     },
     {
         id: 3,
-        tittle: "Naturaleza",
+        nombre: "Naturaleza",
         price: 25,
-        image: ""
+        pictureUrl: ''
     },
     {
         id: 4,
-        tittle: "Nubes",
+        nombre: "Nubes",
         price: 40,
-        image: ""
+        pictureUrl: ''
     },
 ]
+
