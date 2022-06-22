@@ -9,9 +9,22 @@ const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        //llamada API 
-        fetch('https://api.github.com/users').then((response) => response.json()).then((json) => setItems(json));
-    }, [])
+        let timeout;
+
+        function delay() {
+            timeout = setTimeout(alertdelay, 2000);
+        }
+
+        function alertdelay() {
+            //llamada API 
+            fetch('https://api.github.com/users')
+                .then((response) => response.json())
+                .then((json) => setItems(json));
+        }
+
+        delay();
+
+    }, []);
 
     const onAdd = (counter) => {
 
