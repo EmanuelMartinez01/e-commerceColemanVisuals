@@ -6,11 +6,12 @@ const Item = (items) => {
     console.log(items)
     return (
         <div className='card'>
-            <h1 className='tittle'><span>Nombre {items.id}</span></h1>
-            <ul className='subTittle'>
-                <li className='texto'>Imagen {items.pageURL}</li>
-                <li className='texto'>Fotografo</li>
-            </ul>
+            <h1 className='tittle'>Nombre {items.id}</h1>
+            <figcaption className='subTittle'>
+                <h3 className='cardImage'>Imagen {items.pageURL}</h3>
+                <p className='texto'>Fotografo</p>
+                <button className='btn-item'>Add to Cart</button>
+            </figcaption>
 
         </div>
     )

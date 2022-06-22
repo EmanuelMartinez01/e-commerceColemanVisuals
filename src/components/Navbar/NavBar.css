@@ -9,6 +9,7 @@ html {
 
 body {
   font-size: 1.6rem;
+
 }
 
 li {
@@ -26,6 +27,7 @@ img {
 
 .NavBar {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: space-around;
   height: 8vh;
@@ -38,7 +40,7 @@ img {
 }
 
 .nav__link {
-  top: 1rem;
+  font-size: 1.4rem;
 }
 
 .nav__menu {
@@ -95,3 +97,6 @@ img {
 .toggle .line3{
   transform: rotate(45deg) translate(-4px, -5px);
 }
+
+/* Carrito */
+
