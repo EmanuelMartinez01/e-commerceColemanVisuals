@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
 
-//Logo 
-import img from '../Navbar/logoColeman.png'
+
 
 
 const NavBar = () => {
@@ -23,7 +22,6 @@ const NavBar = () => {
     }
     return (
         <nav className='NavBar'>
-            <img className='nav__brand' src={img} alt="logo" />
             <ul className={active}>
                 <li className='nav__item'>
                     <a href="#/" className='nav__link'>Home</a>

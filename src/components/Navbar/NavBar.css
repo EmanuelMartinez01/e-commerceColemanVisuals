@@ -26,6 +26,7 @@ img {
 }
 
 .NavBar {
+  
   display: flex;
   text-align: center;
   align-items: center;

@@ -1,34 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 // Components
+import Header from '../src/components/Header/Header.js';
 import NavBar from '../src/components/Navbar/NavBar.js';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
+import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
 
 
 
 
-class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			name: 'Diego Coleman',
-		};
-	}
 
 
-	render() {
-		return (
+
+function App() {
+	return (
+		<Router>
 			<div className='App'>
-
+				<Header />
 				<NavBar />
-
 				<ItemListContainer className='cart' />
-				<p>Fotografo: {this.state.name}</p>
+				<Routes>
+					<Route path='/users/' element={<ItemDetailContainer greetings='Hola' />} />
+				</Routes>
 
 			</div>
-		);
-	}
+		</Router>
+	);
 }
+
 
 export default App;
