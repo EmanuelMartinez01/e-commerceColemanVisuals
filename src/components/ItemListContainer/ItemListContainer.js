@@ -9,20 +9,15 @@ const ItemListContainer = (props) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        let timeout;
 
-        function delay() {
-            timeout = setTimeout(alertdelay, 2000);
-        }
+        setTimeout(function alertdelay() {
 
-        function alertdelay() {
-            //llamada API 
             fetch('https://api.github.com/users')
-                .then((response) => response.json())
-                .then((json) => setItems(json));
-        }
 
-        delay();
+                .then((response) => response.json())
+
+                .then((json) => setItems(json))
+        }, 2000);
 
     }, []);
 
