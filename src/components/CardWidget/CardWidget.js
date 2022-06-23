@@ -1,12 +1,16 @@
 import React from 'react';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import '../Navbar/NavBar.css'
 
 const CardWidget = () => {
     return (
-        <li className='NavBar'><ShoppingCartIcon /></li>
+        <li className='NavBar'><ShoppingCartOutlinedIcon /></li>
     )
 
 }
 
 
 export default CardWidget;
+
+
+

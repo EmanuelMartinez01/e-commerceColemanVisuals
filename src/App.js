@@ -22,8 +22,8 @@ class App extends Component {
 			<div className='App'>
 
 				<NavBar />
-				<div></div> <hr />
-				<ItemListContainer />
+
+				<ItemListContainer className='cart' />
 				<p>Fotografo: {this.state.name}</p>
 
 			</div>
