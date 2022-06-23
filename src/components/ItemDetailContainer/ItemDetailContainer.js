@@ -13,7 +13,7 @@ const ItemDetailContainer = (props) => {
         function axiosFunction() {
 
             axios(`https://api.github.com/users/${id}`)
-                .then((res) => console.log(res.data))
+                .then((res) => setUser(res.data))
         }
 
         setTimeout(axiosFunction, 2000);

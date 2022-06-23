@@ -20,11 +20,10 @@ function App() {
 			<div className='App'>
 				<Header />
 				<NavBar />
-				<ItemListContainer className='cart' />
 				<Routes>
-					<Route path='/users/' element={<ItemDetailContainer greetings='Hola' />} />
+					<Route path='/' element={<ItemListContainer className='cart' />} />
+					<Route path='/user/:id' element={<ItemDetailContainer greetings='Hola' />} />
 				</Routes>
-
 			</div>
 		</Router>
 	);
