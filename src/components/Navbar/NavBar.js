@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
-
+import { Link } from "react-router-dom";
 
 
 
@@ -24,13 +24,13 @@ const NavBar = () => {
         <nav className='NavBar'>
             <ul className={active}>
                 <li className='nav__item'>
-                    <a href="#/" className='nav__link'>Home</a>
+                    <Link href="#/" className='nav__link'>Home</Link>
                 </li>
                 <li className='nav__item'>
-                    <a href="#/" className='nav__link'>Section</a>
+                    <Link href="#/" className='nav__link'>Section</Link>
                 </li>
                 <li className='nav__item'>
-                    <a href="#/" className='nav__link'>Contact</a>
+                    <Link href="#/" className='nav__link'>Contact</Link>
                 </li>
 
                 <CardWidget className='nav__item' />
