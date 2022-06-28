@@ -1,41 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
+import { data } from '../../Data/Data';
 
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
 
     useEffect(() => {
 
-        setTimeout(function alertdelay() {
-
-            fetch('https://api.github.com/users')
-
-                .then((response) => response.json())
-
-                .then((json) => setItems(json))
-        }, 2000);
+        setTimeout(() => { setItems(data); }, 2000);
 
     }, []);
 
-    const onAdd = (counter) => {
-
-        console.log(counter);
-    }
 
 
 
     return (
         <div className='itemListContainer'>
-
             <ItemList items={items} />
-
-            <ItemCount stock={10} min={1} onAdd={onAdd} />
-
-
         </div>
     )
 

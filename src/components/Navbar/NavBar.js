@@ -23,20 +23,11 @@ const NavBar = () => {
     return (
         <nav className='NavBar'>
             <ul className={active}>
-                <li className='nav__item'>
-                    <Link href="#/" className='nav__link'>Home</Link>
-                </li>
-                <li className='nav__item'>
-                    <Link href="#/" className='nav__link'>Section</Link>
-                </li>
-                <li className='nav__item'>
-                    <Link href="#/" className='nav__link'>Contact</Link>
-                </li>
+                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"}>Home</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"}>Section</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"}>Contact</Link></li>
 
                 <CardWidget className='nav__item' />
-
-
-
             </ul>
 
             <div onClick={navToggle} className={toggleIcon}>

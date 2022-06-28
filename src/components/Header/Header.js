@@ -9,7 +9,7 @@ const Header = () => {
 
     return (
         <div className='Header' to={"/"}>
-            <Link><img src={img} alt="logo" /></Link>
+            <Link to='/'><img src={img} alt="logo" /></Link>
         </div>
     );
 }
