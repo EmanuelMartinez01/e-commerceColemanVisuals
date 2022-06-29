@@ -14,7 +14,9 @@ import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetai
 
 
 
+
 function App() {
+
 	return (
 		<Router>
 			<div className='App'>
