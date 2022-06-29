@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
 import { Link } from "react-router-dom";
-
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 
 const NavBar = () => {
@@ -23,9 +23,9 @@ const NavBar = () => {
     return (
         <nav className='NavBar'>
             <ul className={active}>
-                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"}>Home</Link></li>
-                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"}>Section</Link></li>
-                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"}>Contact</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"} element={<ItemListContainer />}>Home</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"} element={<ItemListContainer />}>Section</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"} element={<ItemListContainer />}>Contact</Link></li>
 
                 <CardWidget className='nav__item' />
             </ul>

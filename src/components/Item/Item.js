@@ -7,19 +7,20 @@ const Item = ({ items }) => {
     console.log(items)
     return (
         <Link to={`/item/${items.id}`}>
-            <div className='card'>
-                <h1 className='tittle'>{items.name}</h1>
-                <figcaption className='subTittle'>
-                    <img className='cardImage' src={items.Url} alt="imagen" />
-                    <p className='texto'>Fotografo</p>
-                    <button className='btn-item'>Add to Cart</button>
-                </figcaption>
+            <div>
 
+                <div className="card-text">
+                    <div className="card-meta">Architecture</div>
+                    <h2 className="card-title">{items.name}</h2>
+                </div>
+                <img className="card-image" src={items.Url} alt="imagen" />
             </div>
         </Link>
 
     )
 }
+
+
 
 
 

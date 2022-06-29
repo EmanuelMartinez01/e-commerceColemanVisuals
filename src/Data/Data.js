@@ -4,7 +4,7 @@ export const data = [
         name: "Paisaje",
         precio: 15,
         stock: 10,
-        Url: "asd",
+        Url: "https://i.ibb.co/txstJWM/sin-t-tulo-10-de-16.jpg",
         categoria: "Naturaleza",
         categoriaId: 1
     },
@@ -19,10 +19,10 @@ export const data = [
     },
     {
         id: 3,
-        name: "Nubes",
+        name: "Niebla",
         precio: 15,
         stock: 10,
-        Url: "asdada",
+        Url: "https://i.ibb.co/8zdhS97/sin-t-tulo-8-de-16.jpg",
         categoria: "Cielo",
         categoriaId: 3
     },
@@ -31,16 +31,16 @@ export const data = [
         name: "Vista",
         precio: 15,
         stock: 10,
-        Url: "adsad",
+        Url: "https://i.ibb.co/jZTycNV/sin-t-tulo-12-de-16.jpg",
         categoria: "Cielo",
         categoriaId: 4
     },
     {
         id: 5,
-        name: "Calle",
+        name: "Estacion",
         precio: 15,
         stock: 10,
-        Url: "asdad",
+        Url: "https://i.ibb.co/DQYspdv/sin-t-tulo-1-de-16.jpg",
         categoria: "Vintage",
         categoriaId: 5
     }
