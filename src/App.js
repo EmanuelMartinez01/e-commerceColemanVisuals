@@ -17,18 +17,21 @@ import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetai
 
 function App() {
 
+
 	return (
-		<Router>
-			<div className='App'>
-				<Header />
-				<NavBar />
-				<Routes>
-					<Route path='/' element={<ItemListContainer className='cart' />} />
-					<Route path='/item/:id' element={<ItemDetailContainer greetings='Hola' />} />
-					<Route path='/category/:categoryId' element={<ItemListContainer />} />
-				</Routes>
-			</div>
-		</Router>
+		<>
+			<Router>
+				<div className='App'>
+					<Header />
+					<NavBar />
+					<Routes>
+						<Route path='/' element={<ItemListContainer className='cart' />} />
+						<Route path='/item/:id' element={<ItemDetailContainer greetings='Hola' />} />
+						<Route path='/category/:categoryId' element={<ItemListContainer />} />
+					</Routes>
+				</div>
+			</Router>
+		</>
 	);
 }
 

@@ -23,9 +23,9 @@ const NavBar = () => {
     return (
         <nav className='NavBar'>
             <ul className={active}>
-                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"} element={<ItemListContainer />}>Home</Link></li>
-                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"} element={<ItemListContainer />}>Section</Link></li>
-                <li className='nav__item'><Link className='nav__link' to={"/category/:categoryId"} element={<ItemListContainer />}>Contact</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/"} element={<ItemListContainer />}>Home</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/section"} element={<ItemListContainer />}>Section</Link></li>
+                <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<ItemListContainer />}>Contact</Link></li>
 
                 <CardWidget className='nav__item' />
             </ul>
