@@ -4,9 +4,15 @@ import './ItemDetail.css'
 
 
 
-
 const ItemDetail = ({ item }) => {
-    console.log(item)
+
+    const onAdd = (add) => {
+        console.log(add);
+    }
+
+
+
+
     return (
 
         <div>
@@ -15,9 +21,8 @@ const ItemDetail = ({ item }) => {
                 <img className='' src={item.Url} alt='avatar' />
                 <p>Lorem ipsum</p>
                 <p className='price'>$ {item.precio}</p>
-
             </div>
-            <ItemCount stock={item.stock} min={0} />
+            <ItemCount stock={item.stock} min={0} onAdd={onAdd} />
         </div>
     )
 
