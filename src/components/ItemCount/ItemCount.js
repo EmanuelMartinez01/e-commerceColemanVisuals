@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './ItemCount.css';
 
 
@@ -27,9 +28,9 @@ const ItemCount = ({ stock, min, onAdd }) => {
     return (
         <div className='ItemCount'>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
-            <p className='celda-count'>{counter}</p>
+            <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
-            <button className='btn-count' onClick={() => onAdd(counter)}>Add to Car</button>
+            <button className='btn-count' onClick={() => onAdd(counter)}><ShoppingCartOutlinedIcon /></button>
         </div>
 
     )
