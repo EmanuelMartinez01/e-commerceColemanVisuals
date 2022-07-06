@@ -5,24 +5,9 @@ import './ItemDetail.css'
 
 
 
+
 const ItemDetail = ({ item }) => {
-
-
-    const { addItem } = useContext(CartContext)
-
-
-    /*    const onAdd = (add) => {
-           console.log(add);
-       } */
-
-
-
-
-
-
-
-
-
+    console.log(item)
     return (
 
         <div>
@@ -31,9 +16,9 @@ const ItemDetail = ({ item }) => {
                 <img className='' src={item.Url} alt='avatar' />
                 <p>Lorem ipsum</p>
                 <p className='price'>$ {item.precio}</p>
-            </div>
 
-            <ItemCount item={item} stock={item.stock} min={0} addItem={addItem} />
+            </div>
+            <ItemCount stock={item.stock} min={0} />
         </div>
     )
 

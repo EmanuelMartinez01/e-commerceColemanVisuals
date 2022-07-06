@@ -10,7 +10,7 @@ const Item = ({ items }) => {
             <div>
 
                 <div className="card-text">
-                    <div className="card-meta">Photos</div>
+                    <div className="card-meta">Architecture</div>
                     <h2 className="card-title">{items.name}</h2>
                 </div>
                 <img className="card-image" src={items.Url} alt="imagen" />

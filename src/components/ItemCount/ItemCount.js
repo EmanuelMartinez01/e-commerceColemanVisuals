@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './ItemCount.css';
-import Cart from '../views/Cart.js';
 
 
 const ItemCount = ({ stock, min, onAdd }) => {
@@ -26,24 +24,14 @@ const ItemCount = ({ stock, min, onAdd }) => {
 
     }
 
-    const [add, setAdd] = useState(1);
-
-    function PushCarrito() {
-        onAdd(counter)
-        setAdd(counter)
-    }
-
-
-
-
 
     return (
         <div className='ItemCount'>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
             <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
-            <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={PushCarrito}><ShoppingCartOutlinedIcon /></button></Link>
-        </div >
+            <button className='btn-count' onClick={() => onAdd(counter)}><ShoppingCartOutlinedIcon /></button>
+        </div>
 
     )
 }

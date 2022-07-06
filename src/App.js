@@ -9,7 +9,7 @@ import ItemListContainer from '../src/components/ItemListContainer/ItemListConta
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
 import Cart from '../src/components/views/Cart'
 
-import { ProductProvider } from '../src/components/Context/CartContext.js';
+
 
 
 
