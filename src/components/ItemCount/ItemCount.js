@@ -6,9 +6,12 @@ import Cart from '../views/Cart.js';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const ItemCount = ({ item, stock, min, addItem }) => {
 =======
+=======
+>>>>>>> parent of 24b8ece (Sin terminar)
 const ItemCount = ({ stock, min, onAdd }) => {
 >>>>>>> parent of 24b8ece (Sin terminar)
     const [counter, setcounter] = useState(min);
@@ -34,6 +37,7 @@ const ItemCount = ({ stock, min, onAdd }) => {
     const [add, setAdd] = useState(1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     /*  function PushCarrito() {
@@ -44,6 +48,8 @@ const ItemCount = ({ stock, min, onAdd }) => {
  
      } */
 =======
+=======
+>>>>>>> parent of 24b8ece (Sin terminar)
     function PushCarrito() {
         onAdd(counter)
         setAdd(counter)
@@ -54,9 +60,12 @@ const ItemCount = ({ stock, min, onAdd }) => {
 
 
 
+
+
     return (
         <div className='ItemCount'>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={() => addItem(item, qty)}><ShoppingCartOutlinedIcon /></button></Link>
 =======
@@ -65,6 +74,12 @@ const ItemCount = ({ stock, min, onAdd }) => {
             <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={PushCarrito}><ShoppingCartOutlinedIcon /></button></Link>
 >>>>>>> parent of 24b8ece (Sin terminar)
         </div >
+=======
+            <div className='celda-count'>{counter}</div>
+            <button className='btn-count' onClick={handlerCounterMinus}>-</button>
+            <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={PushCarrito}><ShoppingCartOutlinedIcon /></button></Link>
+        </div>
+>>>>>>> parent of 24b8ece (Sin terminar)
 
     )
 }

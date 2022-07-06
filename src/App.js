@@ -9,7 +9,11 @@ import ItemListContainer from '../src/components/ItemListContainer/ItemListConta
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
 import Cart from '../src/components/views/Cart'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ProductProvider } from '../src/components/Context/CartContext.js';
+=======
+
+>>>>>>> parent of 24b8ece (Sin terminar)
 =======
 
 >>>>>>> parent of 24b8ece (Sin terminar)
