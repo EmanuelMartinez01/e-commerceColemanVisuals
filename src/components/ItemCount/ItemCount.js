@@ -58,13 +58,13 @@ const ItemCount = ({ stock, min, onAdd }) => {
         <div className='ItemCount'>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
 <<<<<<< HEAD
-            <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={() => addItem(item, qty)}><ShoppingCartOutlinedIcon /></button></Link>
+    <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={() => addItem(item, qty)}><ShoppingCartOutlinedIcon /></button></Link>
 =======
             <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
             <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={PushCarrito}><ShoppingCartOutlinedIcon /></button></Link>
 >>>>>>> parent of 24b8ece (Sin terminar)
-        </div>
+        </div >
 
     )
 }
