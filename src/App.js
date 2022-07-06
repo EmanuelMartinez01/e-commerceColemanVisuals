@@ -8,7 +8,7 @@ import NavBar from '../src/components/Navbar/NavBar.js';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
 import Cart from '../src/components/views/Cart'
-
+import { ProductProvider } from '../src/components/CartContext/CartContext.js';
 
 
 
@@ -18,8 +18,11 @@ import Cart from '../src/components/views/Cart'
 function App() {
 
 
+
+
 	return (
-		<>
+
+		<ProductProvider >
 			<Router>
 				<div className='App'>
 					<Header />
@@ -32,9 +35,10 @@ function App() {
 					</Routes>
 				</div>
 			</Router>
-		</>
+		</ProductProvider>
 	);
 }
+
 
 
 export default App;

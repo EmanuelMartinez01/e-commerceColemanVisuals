@@ -1,9 +1,17 @@
 import React from 'react';
+import Item from '../Item/Item.js'
 
-const Cart = () => {
+
+
+
+const Cart = ({ items }) => {
+
+
     return (
-        <div>
-            <h1>Cart</h1>
+        <div className='cardList'>
+            {items.map((item, idx) => (
+                <Item items={item} key={idx} />
+            ))}
         </div>
     )
 }

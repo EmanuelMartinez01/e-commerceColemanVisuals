@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
 
+
 const NavBar = () => {
     const [active, setActive] = useState('nav__menu');
     const [toggleIcon, setToggleIcon] = useState("nav__toggler");
