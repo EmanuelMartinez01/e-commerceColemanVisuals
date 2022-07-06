@@ -5,11 +5,13 @@ import './ItemCount.css';
 import Cart from '../views/Cart.js';
 
 
+<<<<<<< HEAD
 
 const ItemCount = ({ item, stock, min, addItem }) => {
+=======
+const ItemCount = ({ stock, min, onAdd }) => {
+>>>>>>> parent of 24b8ece (Sin terminar)
     const [counter, setcounter] = useState(min);
-
-
 
 
     const handlerCounterUp = () => {
@@ -31,6 +33,7 @@ const ItemCount = ({ item, stock, min, addItem }) => {
 
     const [add, setAdd] = useState(1);
 
+<<<<<<< HEAD
 
 
     /*  function PushCarrito() {
@@ -40,15 +43,27 @@ const ItemCount = ({ item, stock, min, addItem }) => {
          
  
      } */
+=======
+    function PushCarrito() {
+        onAdd(counter)
+        setAdd(counter)
+    }
+>>>>>>> parent of 24b8ece (Sin terminar)
+
+
 
 
 
     return (
         <div className='ItemCount'>
-            <button className='btn-count' onClick={handlerCounterMinus}>-</button>
-            <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
+<<<<<<< HEAD
             <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={() => addItem(item, qty)}><ShoppingCartOutlinedIcon /></button></Link>
+=======
+            <div className='celda-count'>{counter}</div>
+            <button className='btn-count' onClick={handlerCounterMinus}>-</button>
+            <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={PushCarrito}><ShoppingCartOutlinedIcon /></button></Link>
+>>>>>>> parent of 24b8ece (Sin terminar)
         </div>
 
     )

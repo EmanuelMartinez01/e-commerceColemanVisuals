@@ -8,7 +8,11 @@ import NavBar from '../src/components/Navbar/NavBar.js';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
 import Cart from '../src/components/views/Cart'
+<<<<<<< HEAD
 import { ProductProvider } from '../src/components/Context/CartContext.js';
+=======
+
+>>>>>>> parent of 24b8ece (Sin terminar)
 
 
 
@@ -18,11 +22,8 @@ import { ProductProvider } from '../src/components/Context/CartContext.js';
 function App() {
 
 
-
-
 	return (
-
-		<ProductProvider >
+		<>
 			<Router>
 				<div className='App'>
 					<Header />
@@ -35,10 +36,9 @@ function App() {
 					</Routes>
 				</div>
 			</Router>
-		</ProductProvider>
+		</>
 	);
 }
-
 
 
 export default App;
