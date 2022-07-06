@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
+import { CartContext } from '../Context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
-import CartContext from '../CartContext/CartContext.js';
 import './ItemDetail.css'
 
 
@@ -9,15 +9,13 @@ import './ItemDetail.css'
 const ItemDetail = ({ item }) => {
 
 
-    const cartContext = useContext(CartContext);
-    console.log(cartContext);
 
-    const [cart, setCart] = cartContext;
-    console.log(cart)
+    const { addItem } = useContext(CartContext)
 
-    const onAdd = (add) => {
-        console.log(add);
-    }
+
+    /*    const onAdd = (add) => {
+           console.log(add);
+       } */
 
     return (
 
@@ -28,7 +26,7 @@ const ItemDetail = ({ item }) => {
                 <p>{item.descripcion}</p>
                 <p className='price'>$ {item.precio}</p>
             </div>
-            <ItemCount data={item} stock={item.stock} min={0} onAdd={onAdd} />
+            <ItemCount item={item} stock={item.stock} min={0} addItem={addItem} />
         </div>
     )
 

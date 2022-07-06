@@ -8,7 +8,7 @@ import NavBar from '../src/components/Navbar/NavBar.js';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
 import Cart from '../src/components/views/Cart'
-import { ProductProvider } from '../src/components/CartContext/CartContext.js';
+import { ProductProvider } from '../src/components/Context/CartContext.js';
 
 
 

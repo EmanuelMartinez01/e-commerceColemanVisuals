@@ -6,7 +6,7 @@ import Cart from '../views/Cart.js';
 
 
 
-const ItemCount = ({ stock, min, onAdd }) => {
+const ItemCount = ({ item, stock, min, addItem }) => {
     const [counter, setcounter] = useState(min);
 
 
@@ -33,12 +33,13 @@ const ItemCount = ({ stock, min, onAdd }) => {
 
 
 
-    function PushCarrito() {
-
-        onAdd(counter);
-        setAdd(counter);
-
-    }
+    /*  function PushCarrito() {
+ 
+         onAdd(counter);
+         setAdd(counter);
+         
+ 
+     } */
 
 
 
@@ -47,8 +48,7 @@ const ItemCount = ({ stock, min, onAdd }) => {
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
             <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
-            <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={PushCarrito}><ShoppingCartOutlinedIcon /></button></Link>
-            {/* <button onClick={Delete}>Delete</button>  */}
+            <Link to={"/cart"} element={<Cart />}><button className='btn-count' onClick={() => addItem(item, qty)}><ShoppingCartOutlinedIcon /></button></Link>
         </div>
 
     )

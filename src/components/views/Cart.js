@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Item from '../Item/Item.js'
+import { CartContext } from '../Context/CartContext.js';
 
 
 
+const Cart = () => {
 
-const Cart = ({ items }) => {
+    const { items, addItem } = useContext(CartContext);
+    console.log(items);
 
 
     return (
-        <div className='cardList'>
-            {items.map((item, idx) => (
-                <Item items={item} key={idx} />
-            ))}
+        <div>
+
         </div>
     )
 }
