@@ -3,6 +3,7 @@ import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
 import { Link } from "react-router-dom";
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import Cart from '../views/Cart';
 
 
 const NavBar = () => {
@@ -27,7 +28,7 @@ const NavBar = () => {
                 <li className='nav__item'><Link className='nav__link' to={"/section"} element={<ItemListContainer />}>Section</Link></li>
                 <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<ItemListContainer />}>Contact</Link></li>
 
-                <CardWidget className='nav__item' />
+                <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>
             </ul>
 
             <div onClick={navToggle} className={toggleIcon}>

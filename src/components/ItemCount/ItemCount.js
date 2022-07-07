@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './ItemCount.css';
+import { CartContext } from '../Context/CartContext'
+
+
+
 
 
 const ItemCount = ({ stock, min, onAdd }) => {
+
+    const [cartList, setCartList, addCart] = useContext(CartContext);
+
     const [counter, setcounter] = useState(min);
+
 
 
     const handlerCounterUp = () => {
@@ -21,15 +29,14 @@ const ItemCount = ({ stock, min, onAdd }) => {
         } else {
             alert("Elige una cantidad mayor a 0")
         }
-
     }
 
 
     return (
         <div className='ItemCount'>
-            <button className='btn-count' onClick={handlerCounterUp}>+</button>
-            <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
+            <div className='celda-count'>{counter}</div>
+            <button className='btn-count' onClick={handlerCounterUp}>+</button>
             <button className='btn-count' onClick={() => onAdd(counter)}><ShoppingCartOutlinedIcon /></button>
         </div>
 

@@ -1,25 +1,44 @@
 import React, { useState, createContext } from 'react';
+import { data } from '../../Data/Data';
 
 
-export const CartContext = createContext([]);
+export const CartContext = createContext();
 
 export const ProductProvider = ({ children }) => {
-    const [items, setItems] = useState([{
-        id: 1,
-        tittle: "primer producto",
-        qty: 5
-    }])
+    const [cartList, setCartList] = useState([]);
 
-    /*     const isInCart = (id) => {
-    
-        }
-     */
-    const addItem = (item, qty) => {
-        setItems([...items, { ...item, qty: qty }]);
+    function isInCart(id) {
+        return cartList.some(item => item.id === id);
     }
 
+    function addCart(data, quantity) {
+        if (quantity === 0) {
+            return;
+        }
+
+        let existe = isInCart(data.id);
+
+        if (existe) {
+            let itemCart = cartList.find(item => item.id === data.id);
+            itemCart.quantity += quantity;
+            setCartList([...cartList]);
+        }
+        else {
+            setCartList([...cartList, { ...data, quantity }]);
+        }
+    }
+
+    function cantidadItems() {
+        return cartList.reduce((total, item) => total + item.quantity, 0);
+    }
+
+
+
+
+
+
     return (
-        <CartContext.Provider value={{ items, addItem }}>
+        <CartContext.Provider value={[cartList, setCartList, addCart, cantidadItems]}>
             {children}
         </CartContext.Provider>
     )
