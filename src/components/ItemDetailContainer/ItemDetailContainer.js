@@ -5,7 +5,7 @@ import { getProductById } from '../../Data/Data';
 import { Link } from "react-router-dom";
 
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     let { id } = useParams();
     console.log(id)
@@ -22,7 +22,6 @@ const ItemDetailContainer = (props) => {
 
     return (
         <div className='ItemListContainer'>
-            <h3>{props.greetings}</h3>
             <Link to={`/item/${id}`}> <ItemDetail item={item} /></Link>
         </div >
     )
