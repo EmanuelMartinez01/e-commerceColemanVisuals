@@ -1,16 +1,6 @@
-*,*::after, *::before {
-  margin: 0;
-  box-sizing: border-box;
+header {
+  border-top: 10px solid black;
 }
-
-html {
-  font-size: 62,5%;
-}
-
-body {
-  font-size: 1.6rem;
-}
-
 
 li {
   list-style: none;
@@ -18,12 +8,11 @@ li {
 
 a {
  text-decoration: none;
- color: 	#696969;
+ color: 	black;
 }
 
 
 .NavBar {
-  
   display: flex;
   text-align: center;
   align-items: center;
@@ -31,7 +20,6 @@ a {
   height: 8vh;
   background: #fff;
   margin: 1rem;
-  
 }
 
 .nav__brand {
@@ -80,6 +68,10 @@ a {
   }
 }
 
+.logo {
+  align-items: center;
+  justify-content: center;
+}
 /* Nav active class */
 
 .nav__active {

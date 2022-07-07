@@ -7,6 +7,10 @@ import Cart from '../views/Cart';
 import { CartContext } from '../Context/CartContext';
 
 
+//Logo 
+import img from '../Navbar/logo2.png'
+
+
 const NavBar = () => {
 
     const [cartList, setCartList, addCart, cantidadItems] = useContext(CartContext);
@@ -26,23 +30,30 @@ const NavBar = () => {
             : setToggleIcon('nav__toggler')
     }
     return (
-        <nav className='NavBar'>
-            <ul className={active}>
-                <li className='nav__item'><Link className='nav__link' to={"/"} element={<ItemListContainer />}>Home</Link></li>
-                <li className='nav__item'><Link className='nav__link' to={"/section"} element={<ItemListContainer />}>Section</Link></li>
-                <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<ItemListContainer />}>Contact</Link></li>
+        <header>
+            <div className='NavBar'>
+                <div className='logoBar' >
+                    <img src={img} alt="logo" />
+                </div>
+                <nav>
+                    <ul className={active}>
+                        <li className='nav__item'><Link className='nav__link' to={"/"} element={<ItemListContainer />}>Home</Link></li>
+                        <li className='nav__item'><Link className='nav__link' to={"/section"} element={<ItemListContainer />}>Section</Link></li>
+                        <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<ItemListContainer />}>Contact</Link></li>
 
-                {
-                    cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>
-                }
-            </ul>
+                        {
+                            cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>
+                        }
+                    </ul>
 
-            <div onClick={navToggle} className={toggleIcon}>
-                <div className='line1'></div>
-                <div className='line2'></div>
-                <div className='line3'></div>
+                    <div onClick={navToggle} className={toggleIcon}>
+                        <div className='line1'></div>
+                        <div className='line2'></div>
+                        <div className='line3'></div>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </header>
     );
 }
 
