@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 
 const CardWidget = () => {
 
-    const [cartList, setCartList, clear] = useContext(CartContext);
+    const [cartList, setCartList, addCart, cantidadItems] = useContext(CartContext);
 
 
     return (
         <>
             <Link to={"/Cart"} className='cartWidget'>
                 < ShoppingCartOutlinedIcon />
-                <p>0</p>
+                <p>{cantidadItems()}</p>
             </Link>
         </>
     )

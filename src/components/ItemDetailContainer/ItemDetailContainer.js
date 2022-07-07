@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const ItemDetailContainer = (props) => {
-    const [producto, setProducto] = useState({});
+    const [item, setItem] = useState({});
     let { id } = useParams();
     console.log(id)
 
@@ -14,21 +14,20 @@ const ItemDetailContainer = (props) => {
 
         getProductById(id)
             .then(res => {
-                setProducto(res);
+                setItem(res);
             })
+
     }, [id]);
 
 
     return (
         <div className='ItemListContainer'>
             <h3>{props.greetings}</h3>
-            <ItemDetail producto={producto} />
+            <Link to={`/item/${id}`}> <ItemDetail item={item} /></Link>
         </div >
     )
 
 }
 
-
-{/* <Link to={`/item/${id}`}> <ItemDetail producto={producto} /></Link> */ }
 
 export default ItemDetailContainer; 

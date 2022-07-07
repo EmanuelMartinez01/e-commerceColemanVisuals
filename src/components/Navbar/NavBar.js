@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
 import { Link } from "react-router-dom";
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import Cart from '../views/Cart';
+import { CartContext } from '../Context/CartContext';
 
 
 const NavBar = () => {
+
+    const [cartList, setCartList, addCart, cantidadItems] = useContext(CartContext);
+
     const [active, setActive] = useState('nav__menu');
     const [toggleIcon, setToggleIcon] = useState("nav__toggler");
 
@@ -28,7 +32,9 @@ const NavBar = () => {
                 <li className='nav__item'><Link className='nav__link' to={"/section"} element={<ItemListContainer />}>Section</Link></li>
                 <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<ItemListContainer />}>Contact</Link></li>
 
-                <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>
+                {
+                    cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>
+                }
             </ul>
 
             <div onClick={navToggle} className={toggleIcon}>
