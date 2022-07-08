@@ -6,7 +6,7 @@ import { CartContext } from '../Context/CartContext';
 
 export const CartSummary = () => {
 
-    const [cartList, setCartList, addCart, cantidadItems, clear, totalPrice] = useContext(CartContext);
+    const [cartList, addCart, cantidadItems, totalPrice] = useContext(CartContext);
 
     return (
         <div className='cartSummary'>
@@ -14,6 +14,7 @@ export const CartSummary = () => {
             <div>
                 <p className='priceSummary'><span className='priceSpanSummary'>Total: ${totalPrice()}</span></p>
             </div>
+            <button className='compraFinalizada'>Finalizar Compra</button>
         </div>
     )
 }

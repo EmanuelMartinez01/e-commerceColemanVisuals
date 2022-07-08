@@ -9,7 +9,7 @@ import { CartContext } from '../Context/CartContext'
 
 const ItemCount = ({ stock, min, onAdd }) => {
 
-    const [cartList, setCartList, addCart] = useContext(CartContext);
+    const [cartList, addCart] = useContext(CartContext);
 
     const [counter, setcounter] = useState(min);
 
