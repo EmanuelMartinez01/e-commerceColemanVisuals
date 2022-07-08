@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const CardWidget = () => {
 
-    const [cartList, setCartList, addCart, cantidadItems] = useContext(CartContext);
+    const [cartList, addCart, cantidadItems] = useContext(CartContext);
 
 
     return (

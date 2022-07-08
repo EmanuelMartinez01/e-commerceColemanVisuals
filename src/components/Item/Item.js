@@ -12,8 +12,8 @@ const Item = ({ items }) => {
                     <div className="imgBx">
                         <img src={items.Url} alt="imagen" />
                     </div>
-                    <div>
-                        <h2 className="details">{items.name} </h2>
+                    <div className="details">
+                        <h2 >{items.name} </h2>
                         <br></br>
                         <span>Coleman</span>
                     </div>

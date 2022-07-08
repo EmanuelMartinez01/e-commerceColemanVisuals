@@ -1,4 +1,4 @@
-.wrapper {
+.wrapperCart {
   height: 420px;
   width: 654px;
   margin: 50px auto;
@@ -9,17 +9,17 @@
   box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
 
-.product-img {
+.productImgCart {
   float: left;
   height: 420px;
   width: 327px;
 }
 
-.product-img product-content {
+.productImgCart {
   border-radius: 7px 0 0 7px;
 }
 
-.product-info {
+.productInfoCart {
   float: left;
   height: 420px;
   width: 327px;
@@ -27,24 +27,24 @@
   background-color: #ffffff;
 }
 
-.product-text {
+.productTexCart {
   height: 300px;
   width: 327px;
 }
 
-.product-text .product-h3 {
+.productTexCart .productH3Cart {
   margin: 0 0 0 38px;
   padding-top: 52px;
   font-size: 34px;
   color: #474747;
 }
 
-.product-text .product-h3,
-.product-price-btn p {
+.productTexCart .productH3Cart,
+.product-price-btn-cart .textoCart {
   font-family: 'Bentham', serif;
 }
 
-.product-text .product-h4 {
+.productTexCart .productH4Cart {
   margin: 0 0 47px 38px;
   font-size: 13px;
   font-family: 'Raleway', sans-serif;
@@ -54,7 +54,18 @@
   letter-spacing: 0.2em;
 }
 
-.product-text .price {
+.productTexCart .textoCart {
+  height: 125px;
+  margin: 0 0 0 38px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.productTexCart .price1 {
   height: 125px;
   font-family: 'Playfair Display', serif;
   color: #8d8d8d;
@@ -64,14 +75,14 @@
   overflow: hidden;
 }
 
-.product-price-btn {
+.product-price-btn-cart {
   height: 103px;
   width: 327px;
   margin-top: 17px;
   position: relative;
 }
 
-.product-price-btn .price {
+.product-price-btn-cart .price1 {
   display: inline-block;
   position: absolute;
   top: -13px;
@@ -83,7 +94,7 @@
   color: #474747;
 }
 
-.price-span {
+.price-span1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,26 +103,60 @@
   font-size: 34px;
 }
 
-.product-price-btn button {
-  float: right;
-  display: inline-block;
-  height: 50px;
-  width: 176px;
-  margin: 0 20px 0 16px;
-  box-sizing: border-box;
-  border: transparent;
-  border-radius: 60px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #ffffff;
-  background-color: #9cebd5;
-  cursor: pointer;
-  outline: none;
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: red;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: #e62222;
 }
 
-.product-price-btn button:hover {
-  background-color: #79b0a1;
+button, button span {
+	transition: 200ms;
+}
+
+button .textoEliminar {
+	transform: translateX(35px);
+	color: white;
+	font-weight: bold;
+}
+
+button .icon {
+	position: absolute;
+	border-left: 1px solid #c41b1b;
+	transform: translateX(110px);
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button svg {
+	width: 15px;
+	fill: #eee;
+}
+
+button:hover {
+	background: #ff3636;
+}
+
+button:hover .textoEliminar {
+	color: transparent;
+}
+
+button:hover .icon {
+	width: 150px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+button:focus {
+	outline: none;
 }

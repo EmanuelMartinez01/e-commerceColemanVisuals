@@ -1,0 +1,17 @@
+.cartSummary {
+    background-color: #fff;
+}
+
+.priceSummary {
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-weight: lighter;
+}
+
+.priceSpanSummary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Suranna', serif;
+}

@@ -13,7 +13,7 @@ import img from '../Navbar/logo2.png'
 
 const NavBar = () => {
 
-    const [cartList, setCartList, addCart, cantidadItems] = useContext(CartContext);
+    const [cartList, addCart, cantidadItems] = useContext(CartContext);
 
     const [active, setActive] = useState('nav__menu');
     const [toggleIcon, setToggleIcon] = useState("nav__toggler");
