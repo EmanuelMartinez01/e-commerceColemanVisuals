@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
-import { data } from '../../Data/Data';
+// import { data } from '../../Data/Data';
 
 
 const ItemListContainer = () => {
 
-    const [items, setItems] = useState([]);
+    // const [items, setItems] = useState([]);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        setTimeout(() => { setItems(data); }, 2000);
+    //     setTimeout(() => { setItems(data); }, 2000);
 
-    }, []);
+    // }, []);
 
 
 
 
     return (
         <div className='itemListContainer'>
-            <ItemList items={items} />
+            <ItemList />
         </div>
     )
 

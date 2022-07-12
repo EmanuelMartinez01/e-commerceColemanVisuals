@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import Cart from '../views/Cart';
 import { CartContext } from '../Context/CartContext';
-
+import { Section } from '../Pages/Section';
+import { Contact } from '../Pages/Contact';
 
 //Logo 
 import img from '../Navbar/logo2.png'
+
 
 
 const NavBar = () => {
@@ -38,8 +40,8 @@ const NavBar = () => {
                 <nav>
                     <ul className={active}>
                         <li className='nav__item'><Link className='nav__link' to={"/"} element={<ItemListContainer />}>Home</Link></li>
-                        <li className='nav__item'><Link className='nav__link' to={"/section"} element={<ItemListContainer />}>Section</Link></li>
-                        <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<ItemListContainer />}>Contact</Link></li>
+                        <li className='nav__item'><Link className='nav__link' to={"/section"} element={<Section />}>Section</Link></li>
+                        <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<Contact />}>Contact</Link></li>
 
                         {
                             cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>

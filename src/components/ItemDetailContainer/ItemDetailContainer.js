@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail.js'
 import { useParams } from 'react-router-dom';
 import { getProductById } from '../../Data/Data';
-import { Link } from "react-router-dom";
+
 
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     let { id } = useParams();
-    console.log(id)
+    console.log(item)
 
     useEffect(() => {
 
@@ -22,11 +22,10 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='ItemListContainer'>
-            <Link to={`/item/${id}`}> <ItemDetail item={item} /></Link>
+            <ItemDetail item={item} />
         </div >
-    )
-
-}
+    );
+};
 
 
 export default ItemDetailContainer; 

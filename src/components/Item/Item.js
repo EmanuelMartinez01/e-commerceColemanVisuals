@@ -15,7 +15,7 @@ const Item = ({ items }) => {
                     <div className="details">
                         <h2 >{items.name} </h2>
                         <br></br>
-                        <span>Coleman</span>
+                        <span>{items.detail}</span>
                     </div>
                 </div>
             </div>
