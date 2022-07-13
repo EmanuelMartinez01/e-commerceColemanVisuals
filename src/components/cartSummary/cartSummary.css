@@ -1,8 +1,15 @@
 .cartSummary {
-    background-color: #fff;
+     height: auto;
+  width: 654px;
+  margin: 50px auto;
+  border-radius: 7px 7px 7px 7px;
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
 
 .priceSummary {
+  background-color: #fff;
   font-family: 'Playfair Display', serif;
   color: #8d8d8d;
   line-height: 1.7em;
@@ -14,4 +21,16 @@
   align-items: center;
   justify-content: center;
   font-family: 'Suranna', serif;
+}
+
+.compraFinalizada {
+  width: 60px;
+	height: 60px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: #9cebd5;
 }

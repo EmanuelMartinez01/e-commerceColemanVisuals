@@ -14,7 +14,9 @@ export const CartSummary = () => {
             <div>
                 <p className='priceSummary'><span className='priceSpanSummary'>Total: ${totalPrice()}</span></p>
             </div>
-            <button className='compraFinalizada'>Finalizar Compra</button>
+            <div className='cartFinalizada'>
+                <button className='compraFinalizada'>Finalizar Compra</button>
+            </div>
         </div>
     )
 }

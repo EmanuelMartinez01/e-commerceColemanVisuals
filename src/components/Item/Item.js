@@ -13,7 +13,7 @@ const Item = ({ items }) => {
                         <img src={items.Url} alt="imagen" />
                     </div>
                     <div className="details">
-                        <h2 >{items.name} </h2>
+                        <h2>{items.name} </h2>
                         <br></br>
                         <span>{items.detail}</span>
                     </div>

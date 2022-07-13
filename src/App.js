@@ -6,10 +6,10 @@ import './App.css';
 import NavBar from '../src/components/Navbar/NavBar.js';
 import ItemListContainer from '../src/components/ItemListContainer/ItemListContainer.js'
 import ItemDetailContainer from '../src/components/ItemDetailContainer/ItemDetailContainer.js';
-import Cart from '../src/components/views/Cart'
+import Cart from './components/views/Cart/Cart'
 import { ProductProvider } from './components/Context/CartContext'
-import { Contact } from './components/Pages/Contact';
-import { Section } from './components/Pages/Section';
+import { Contact } from './components/views/Contact/Contact';
+import CategoryList from './components/views/CategoryList/CategoryList';
 
 
 
@@ -24,11 +24,11 @@ function App() {
 				<div className='App'>
 					<NavBar />
 					<Routes>
-						<Route path='/' element={<ItemListContainer className='cart' />} />
+						<Route path='/' element={<ItemListContainer />} />
 						<Route path='/item/:id' element={<ItemDetailContainer greetings='Hola' />} />
 						<Route path='/category/:categoryId' element={<ItemListContainer />} />
 						<Route path='/cart' element={<Cart />} />
-						<Route path='/section' element={<Section />} />
+						<Route path='/categorylist/:category' element={<CategoryList />} />
 						<Route path='/contact' element={<Contact />} />
 					</Routes>
 				</div>

@@ -13,6 +13,7 @@ const ItemList = () => {
 
     const [photosData, setPhotosData] = useState([]);
 
+
     const getPhotos = async () => {
         const q = query(collection(db, 'data'));
         const querySnapshot = await getDocs(q);

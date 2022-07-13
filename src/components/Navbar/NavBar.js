@@ -3,13 +3,14 @@ import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
 import { Link } from "react-router-dom";
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
-import Cart from '../views/Cart';
+import Cart from '../views/Cart/Cart';
 import { CartContext } from '../Context/CartContext';
-import { Section } from '../Pages/Section';
-import { Contact } from '../Pages/Contact';
+import { Contact } from '../views/Contact/Contact';
+import CategoryList from '../views/CategoryList/CategoryList';
 
-//Logo 
+//Logo
 import img from '../Navbar/logo2.png'
+
 
 
 
@@ -40,7 +41,8 @@ const NavBar = () => {
                 <nav>
                     <ul className={active}>
                         <li className='nav__item'><Link className='nav__link' to={"/"} element={<ItemListContainer />}>Home</Link></li>
-                        <li className='nav__item'><Link className='nav__link' to={"/section"} element={<Section />}>Section</Link></li>
+                        <li className='nav__item'><Link className='nav__link' to={"/categorylist/Session-Night"} element={<CategoryList />}>Session Night</Link></li>
+                        <li className='nav__item'><Link className='nav__link' to={"/categorylist/Session-Morning"} element={<CategoryList />}>Session Morning</Link></li>
                         <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<Contact />}>Contact</Link></li>
 
                         {
