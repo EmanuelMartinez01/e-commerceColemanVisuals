@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Item from '../../Item/Item';
+import Item from '../../Item/Item.js';
 
 // Firebase
 import { db } from '../../../firebase/firabaseConfig';
@@ -10,7 +10,6 @@ import { collection, query, getDocs, where } from 'firebase/firestore';
 const CategoryList = () => {
 
     const [photosData, setPhotosData] = useState([]);
-
 
     const { category } = useParams();
 
@@ -31,7 +30,6 @@ const CategoryList = () => {
 
     return (
         <div className='cardList'>
-            <h1>Hola</h1>
             {photosData.map((item, idx) => (
                 <Item items={item} key={idx} />
             ))}
