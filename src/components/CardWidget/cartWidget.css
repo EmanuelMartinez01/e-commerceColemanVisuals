@@ -1,4 +1,11 @@
 .cartWidget {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.textWidget {
+    text-decoration: none;
 }

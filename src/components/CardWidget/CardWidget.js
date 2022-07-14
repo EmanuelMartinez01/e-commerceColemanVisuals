@@ -15,7 +15,7 @@ const CardWidget = () => {
         <>
             <Link to={"/Cart"} className='cartWidget'>
                 < ShoppingCartOutlinedIcon />
-                <p>{cantidadItems()}</p>
+                <p className='textWidget'>{cantidadItems()}</p>
             </Link>
         </>
     )

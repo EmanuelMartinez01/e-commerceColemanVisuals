@@ -1,64 +1,100 @@
 import React, { useContext, useState } from 'react';
-import './NavBar.css';
 import CardWidget from '../CardWidget/CardWidget.js';
-import { Link } from "react-router-dom";
+import { Button } from './Button/Button.js';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
+import Dropdown from './Dropdown/Dropdown.js';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import Cart from '../views/Cart/Cart';
 import { CartContext } from '../Context/CartContext';
 import { Contact } from '../views/Contact/Contact';
 import CategoryList from '../views/CategoryList/CategoryList';
 
+
 //Logo
 import img from '../Navbar/logo2.png'
 
 
-
-
-const NavBar = () => {
+function Navbar() {
 
     const [cartList, addCart, cantidadItems] = useContext(CartContext);
+    const [click, setClick] = useState(false);
+    const [dropdown, setDropdown] = useState(false);
 
-    const [active, setActive] = useState('nav__menu');
-    const [toggleIcon, setToggleIcon] = useState("nav__toggler");
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
 
+    const onMouseEnter = () => {
+        if (window.innerWidth < 960) {
+            setDropdown(false);
+        } else {
+            setDropdown(true);
+        }
+    };
 
-    const navToggle = () => {
-        active === 'nav__menu'
-            ? setActive('nav__menu nav__active')
-            : setActive('nav__menu');
+    const onMouseLeave = () => {
+        if (window.innerWidth < 960) {
+            setDropdown(false);
+        } else {
+            setDropdown(false);
+        }
+    };
 
-        // TogglerIcon
-        toggleIcon === 'nav__toggler'
-            ? setToggleIcon('nav__toggler toggle')
-            : setToggleIcon('nav__toggler')
-    }
     return (
-        <header>
-            <div className='NavBar'>
-                <div className='logoBar' >
+        <>
+            <nav className='navbar'>
+                <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     <img src={img} alt="logo" />
+                </Link>
+                <div className='menu-icon' onClick={handleClick}>
+                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
-                <nav>
-                    <ul className={active}>
-                        <li className='nav__item'><Link className='nav__link' to={"/"} element={<ItemListContainer />}>Home</Link></li>
-                        <li className='nav__item'><Link className='nav__link' to={"/categorylist/Session-Night"} element={<CategoryList />}>Session Night</Link></li>
-                        <li className='nav__item'><Link className='nav__link' to={"/categorylist/Session-Morning"} element={<CategoryList />}>Session Morning</Link></li>
-                        <li className='nav__item'><Link className='nav__link' to={"/contact"} element={<Contact />}>Contact</Link></li>
-
-                        {
-                            cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget className='nav__item' /></Link>
-                        }
-                    </ul>
-
-                    <div onClick={navToggle} className={toggleIcon}>
-                        <div className='line1'></div>
-                        <div className='line2'></div>
-                        <div className='line3'></div>
-                    </div>
-                </nav>
-            </div>
-        </header>
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className='nav-item'>
+                        <Link to={"/"} element={<ItemListContainer />} className='nav-links' onClick={closeMobileMenu}>
+                            Home
+                        </Link>
+                    </li>
+                    <li
+                        className='nav-item'
+                        onMouseEnter={onMouseEnter}
+                        onMouseLeave={onMouseLeave}
+                    >
+                        <Link
+                            to={"/categorylist/Sessions"} element={<CategoryList />}
+                            className='nav-links'
+                            onClick={closeMobileMenu}
+                        >
+                            Sessions <i className='fas fa-caret-down' />
+                        </Link>
+                        {dropdown && <Dropdown />}
+                    </li>
+                    <li className='nav-item'>
+                        <Link
+                            to={"/contact"} element={<Contact />}
+                            className='nav-links'
+                            onClick={closeMobileMenu}
+                        >
+                            Contact
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to='/sign-up'
+                            className='nav-links-mobile'
+                            onClick={closeMobileMenu}
+                        >
+                            Sign Up
+                        </Link>
+                    </li>
+                    {
+                        cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget /></Link>
+                    }
+                </ul>
+                <Button />
+            </nav>
+        </>
     );
 }
 
-export default NavBar;
+export default Navbar;

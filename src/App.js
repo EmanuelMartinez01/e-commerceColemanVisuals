@@ -10,6 +10,7 @@ import Cart from './components/views/Cart/Cart'
 import { ProductProvider } from './components/Context/CartContext'
 import { Contact } from './components/views/Contact/Contact';
 import CategoryList from './components/views/CategoryList/CategoryList';
+import Sessions from './components/views/Sessions/Sessions';
 
 
 
@@ -28,6 +29,7 @@ function App() {
 						<Route path='/item/:id' element={<ItemDetailContainer greetings='Hola' />} />
 						<Route path='/category/:categoryId' element={<ItemListContainer />} />
 						<Route path='/cart' element={<Cart />} />
+						<Route path='/categorylist/' exact component={Sessions} />
 						<Route path='/categorylist/:category' element={<CategoryList />} />
 						<Route path='/contact' element={<Contact />} />
 					</Routes>
