@@ -17,7 +17,7 @@ function Dropdown() {
             >
                 {MenuItems.map((item, index) => {
                     return (
-                        <li key={index}>
+                        <li className='sessions-drop' key={index}>
                             <Link
                                 className={item.cName}
                                 to={item.path}

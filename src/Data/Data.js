@@ -5,7 +5,7 @@ export const data = [
         precio: 3200,
         stock: 10,
         Url: "https://i.ibb.co/txstJWM/sin-t-tulo-10-de-16.jpg",
-        category: "Session-Night",
+        category: "Night-Session",
         detail: "Diego Coleman",
         quantity: 0,
         categoryId: 1
@@ -16,7 +16,7 @@ export const data = [
         precio: 3200,
         stock: 10,
         Url: "https://i.ibb.co/PxvXgwW/sin-t-tulo-4-de-16.jpg",
-        category: "Session-Night",
+        category: "Night-Session",
         detail: "Diego Coleman",
         quantity: 0,
         categoryId: 2
@@ -27,7 +27,7 @@ export const data = [
         precio: 3200,
         stock: 10,
         Url: "https://i.ibb.co/8zdhS97/sin-t-tulo-8-de-16.jpg",
-        category: "Session-Night",
+        category: "Night-Session",
         detail: "Diego Coleman",
         quantity: 0,
         categoryId: 3
@@ -38,7 +38,7 @@ export const data = [
         precio: 3200,
         stock: 10,
         Url: "https://i.ibb.co/jZTycNV/sin-t-tulo-12-de-16.jpg",
-        category: "Session-Night",
+        category: "Night-Session",
         detail: "Diego Coleman",
         quantity: 0,
         categoryId: 4
@@ -49,7 +49,7 @@ export const data = [
         precio: 3200,
         stock: 10,
         Url: "https://i.ibb.co/DQYspdv/sin-t-tulo-1-de-16.jpg",
-        category: "Session-Night",
+        category: "Night-Session",
         detail: "Diego Coleman",
         quantity: 0,
         categoryId: 5
