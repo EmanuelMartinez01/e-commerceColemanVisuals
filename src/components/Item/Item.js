@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 
 const Item = ({ items }) => {
-    console.log(items)
     return (
         <Link to={`/item/${items.id}`}>
             <div className='box'>

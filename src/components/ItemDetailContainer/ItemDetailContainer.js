@@ -8,7 +8,6 @@ import { getProductById } from '../../Data/Data';
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     let { id } = useParams();
-    console.log(item)
 
     useEffect(() => {
 

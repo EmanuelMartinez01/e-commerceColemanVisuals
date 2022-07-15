@@ -1,6 +1,6 @@
 .cardList {
     display: flex;
     flex-wrap: wrap;
-    margin: 2vw 0;
-    justify-content: space-between;
+    margin: 4vw 0;
+    
 }

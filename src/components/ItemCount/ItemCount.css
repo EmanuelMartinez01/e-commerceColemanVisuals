@@ -7,8 +7,10 @@
 }
 
 .celda-count {
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  color: #474747;
+  font-weight: bold;
 }
 
 

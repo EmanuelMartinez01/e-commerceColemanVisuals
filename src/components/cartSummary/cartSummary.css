@@ -1,5 +1,7 @@
 .cartSummary {
-     height: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   width: 654px;
   margin: 50px auto;
   border-radius: 7px 7px 7px 7px;
@@ -28,9 +30,41 @@
 	height: 60px;
 	cursor: pointer;
 	display: flex;
+  justify-content: center;
 	align-items: center;
 	border: none;
 	border-radius: 50%;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
-	background: #9cebd5;
+	background: #474747;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 4vw;
+}
+
+.text-Resumen {
+  margin: 0 2vw;
+  padding-top: 1vw;
+}
+
+.send-btn {
+  color: #fff;
+  width: 60px;
+	height: 60px;
+	cursor: pointer;
+	display: flex;
+  justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+	background: #1888ff;
+}
+
+.cart-Resumen {
+  display: flex;
+  flex-direction: column;
 }

@@ -8,6 +8,7 @@ const Cart = () => {
 
     const [cartList, addCart, cantidadItems, totalPrice] = useContext(CartContext);
 
+
     return (
         <div>
             <h1>Cart</h1>
@@ -29,7 +30,6 @@ const Cart = () => {
                         </div>
                     </div>
                 </div>
-
             ))}
             <div><CartSummary /></div>
         </div>
