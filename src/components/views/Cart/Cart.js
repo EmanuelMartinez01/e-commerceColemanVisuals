@@ -8,7 +8,6 @@ const Cart = () => {
 
     const [cartList, addCart, cantidadItems, totalPrice] = useContext(CartContext);
 
-
     return (
         <div>
             <h1>Cart</h1>
@@ -16,7 +15,7 @@ const Cart = () => {
                 <div className='wrapperCart' key={item.id}>
 
                     <div className='productImgCart'>
-                        <img src={item.Url} height={420} width={327} alt='imagen' />
+                        <img src={item.Url} alt='imagen' />
                     </div>
                     <div className='productInfoCart'>
                         <div className='productTexCart'>

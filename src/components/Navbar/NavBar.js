@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import CardWidget from '../CardWidget/CardWidget.js';
-import { Button } from './Button/Button.js';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import Dropdown from './Dropdown/Dropdown.js';
@@ -78,20 +77,10 @@ function Navbar() {
                             Contact
                         </Link>
                     </li>
-                    <li>
-                        <Link
-                            to='/sign-up'
-                            className='nav-links-mobile'
-                            onClick={closeMobileMenu}
-                        >
-                            Sign Up
-                        </Link>
-                    </li>
                     {
                         cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget /></Link>
                     }
                 </ul>
-                <Button />
             </nav>
         </>
     );
