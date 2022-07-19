@@ -101,8 +101,10 @@ export const CartSummary = () => {
                         name='email'
                         value={values.email}
                         onChange={handleOnChange} />
-                    <button className='send-btn' onClick={generarOrden} >Finalizar Compra</button>
 
+                    <div className='btn-container'>
+                        <button className='send-btn' onClick={generarOrden} >Finalizar Compra</button>
+                    </div>
                 </form>
                 {purchaseID && <MessageOrder purchaseID={purchaseID} />}
             </div>

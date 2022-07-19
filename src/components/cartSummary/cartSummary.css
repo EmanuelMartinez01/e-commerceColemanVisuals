@@ -50,13 +50,17 @@ form {
   padding-top: 1vw;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 2vw auto;
+}
+
 .send-btn {
   color: #fff;
-  width: 60px;
-	height: 60px;
+  width: 70px;
+	height: 70px;
 	cursor: pointer;
-	display: flex;
-  justify-content: center;
 	align-items: center;
 	border: none;
 	border-radius: 50%;

@@ -45,9 +45,7 @@ function Navbar() {
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     <img src={img} alt="logo" />
                 </Link>
-                <div className='menu-icon' onClick={handleClick}>
-                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                </div>
+
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
                         <Link to={"/"} element={<ItemListContainer />} className='nav-links' onClick={closeMobileMenu}>
@@ -77,10 +75,13 @@ function Navbar() {
                             Contact
                         </Link>
                     </li>
-                    {
-                        cartList.length === 0 ? null : <Link to={"/Cart"} element={<Cart />}><CardWidget /></Link>
-                    }
+
+                    <CardWidget />
+
                 </ul>
+                <div className='menu-icon' onClick={handleClick}>
+                    <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                </div>
             </nav>
         </>
     );

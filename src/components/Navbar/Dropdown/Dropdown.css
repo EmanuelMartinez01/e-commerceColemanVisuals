@@ -6,13 +6,12 @@
     text-align: start;
 }
 
-.dropdown-menu li {
+.dropdown-menu .sessions-drop {
     background: #fff;
     cursor: pointer;
 }
 
-.dropdown-menu:hover li{
-
+.dropdown-menu:hover .sessions-drop{
     background: #fff;
 }
 

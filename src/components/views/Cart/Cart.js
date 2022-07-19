@@ -6,7 +6,7 @@ import './Cart.css'
 
 const Cart = () => {
 
-    const [cartList, addCart, cantidadItems, totalPrice] = useContext(CartContext);
+    const [cartList, addCart, cantidadItems, totalPrice, clear, eliminarItem] = useContext(CartContext);
 
     return (
         <div>
@@ -25,7 +25,7 @@ const Cart = () => {
                         </div>
                         <div className='product-price-btn-cart'>
 
-                            <button className='noselect'>X</button>
+                            <button className='noselect' onClick={() => eliminarItem(item.id)}>X</button>
                         </div>
                     </div>
                 </div>
