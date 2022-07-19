@@ -1,6 +1,6 @@
 .navbar {
+  border-top: 6px solid black;
   background: #fff;
-  height: 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +61,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10vw;
   }
 
   .NavbarItems {

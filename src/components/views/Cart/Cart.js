@@ -15,7 +15,7 @@ const Cart = () => {
                 <div className='wrapperCart' key={item.id}>
 
                     <div className='productImgCart'>
-                        <img src={item.Url} alt='imagen' />
+                        <img src={item.Url} height={420} width={300} alt='imagen' />
                     </div>
                     <div className='productInfoCart'>
                         <div className='productTexCart'>

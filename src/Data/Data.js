@@ -53,7 +53,62 @@ export const data = [
         detail: "Diego Coleman",
         quantity: 0,
         categoryId: 5
-    }
+    },
+    {
+        id: 6,
+        name: "Purple",
+        precio: 3200,
+        stock: 10,
+        Url: "https://i.ibb.co/smNvkPq/Madryn-4.jpg",
+        category: "Morning-Session",
+        detail: "Puerto Madryn",
+        quantity: 0,
+        categoryId: 6
+    },
+    {
+        id: 7,
+        name: "Birds",
+        precio: 3200,
+        stock: 10,
+        Url: "https://i.ibb.co/mqxfyTL/Madryn-35.jpg",
+        category: "Morning-Session",
+        detail: "Puerto Madryn",
+        quantity: 0,
+        categoryId: 7
+    },
+    {
+        id: 8,
+        name: "Color",
+        precio: 3200,
+        stock: 10,
+        Url: "https://i.ibb.co/s6wm3QR/Madryn-32.jpg",
+        category: "Morning-Session",
+        detail: "Puerto Madryn",
+        quantity: 0,
+        categoryId: 8
+    },
+    {
+        id: 9,
+        name: "Clouds",
+        precio: 3200,
+        stock: 10,
+        Url: "https://i.ibb.co/vZxnQRR/Madryn-28.jpg",
+        category: "Morning-Session",
+        detail: "Puerto Madryn",
+        quantity: 0,
+        categoryId: 9
+    },
+    {
+        id: 10,
+        name: "Mirror",
+        precio: 3200,
+        stock: 10,
+        Url: "https://i.ibb.co/NYNZny9/Madryn-23.jpg",
+        category: "Morning-Session",
+        detail: "Puerto Madryn",
+        quantity: 0,
+        categoryId: 10
+    },
 ];
 
 export const getProductById = (id) => {

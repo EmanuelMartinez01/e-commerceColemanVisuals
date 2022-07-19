@@ -17,7 +17,7 @@ const ItemDetail = ({ item }) => {
 
         <div className='wrapper'>
             <div className='product-img' id={item.id} key={item.id}>
-                <img src={item.Url} height={420} width={327} alt='avatar' />
+                <img className='cart-img' src={item.Url} height={410} width={300} alt='avatar' />
             </div>
             <div className='product-info'>
                 <div className='product-text'>

@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 import Dropdown from './Dropdown/Dropdown.js';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
-import Cart from '../views/Cart/Cart';
 import { CartContext } from '../Context/CartContext';
 import { Contact } from '../views/Contact/Contact';
 import CategoryList from '../views/CategoryList/CategoryList';
 
 
 //Logo
-import img from '../Navbar/logo2.png'
+import img from '../../assets/logo2.png'
 
 
 function Navbar() {
