@@ -1,45 +1,32 @@
 .ItemCount {
-    width: 15%;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1rem;
+  width: 15%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1vw;
 }
 
 .celda-count {
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-size: 1.8vw;
   color: #474747;
   font-weight: bold;
 }
 
 
 .btn-count {
-  align-items: center;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 24px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.85);
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
+  display: flex;
+  border-radius: 50%;
+  padding: 2.2vw;
   justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 4px);
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+
+.btn-cart {
+  border-radius: 50%;
+  padding: 1.5vw;
 }
 
 .btn-count :hover,
@@ -60,5 +47,3 @@
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
-
-

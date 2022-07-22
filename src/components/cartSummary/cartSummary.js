@@ -8,6 +8,7 @@ import MessageOrder from '../MessageOrder/MessageOrder';
 import { db } from '../../firebase/firabaseConfig';
 import { collection, addDoc } from "firebase/firestore";
 import OrderItem from '../OrderItem/OrderItem';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const products = [];
 
@@ -15,6 +16,7 @@ const initialState = {
     name: '',
     phone: '',
     email: '',
+    reEmail: '',
     products: products,
     date: new Date(),
 };
@@ -25,12 +27,15 @@ export const CartSummary = () => {
 
     const [cartList, addCart, cantidadItems, totalPrice] = useContext(CartContext);
 
-
     const [values, setValues] = useState(initialState);
 
     //Estado que guarda ID de compra
     const [purchaseID, setPurchaseID] = useState('');
 
+    //Estado Mensaje de Error Email
+    const [errorMail, setErrorMail] = useState(false);
+
+    const [finishOrderButton, setFinishOrderButton] = useState(false);
 
     const generarOrden = () => {
         //nuevo objeto de orders           
@@ -49,17 +54,23 @@ export const CartSummary = () => {
         console.log(values);
         //Datos Comprador
         e.preventDefault();
-        const docRef = await addDoc(collection(db, 'ordenes'), {
-            values,
-        });
-        setPurchaseID(docRef.id);
-        setValues(initialState);
+        if (values.email === values.reEmail) {
+            const docRef = await addDoc(collection(db, 'ordenes'), {
+                values,
+            });
+            setPurchaseID(docRef.id);
+            setValues(initialState);
+            setErrorMail(errorMail => false)
+        } else {
+            setErrorMail(errorMail => !errorMail)
+        }
     }
 
 
 
     return (
         <div className='cartSummary'>
+            {errorMail && <ErrorMessage />}
             <h2 className='text-Resumen'>Resumen</h2>
             <div className='cart-Resumen'>
                 {cartList.map((item, idx) => (
@@ -69,14 +80,14 @@ export const CartSummary = () => {
             <div>
                 <p className='priceSummary'><span className='priceSpanSummary'>Total: ${totalPrice()}</span></p>
             </div>
-            <h3>Contacto</h3>
+            <h3 className='text-Resumen'>Contacto</h3>
             <div>
                 <form onSubmit={onSubmit}>
                     <TextField
                         margin='dense'
                         className='input-Name'
                         id="outlined-basic"
-                        label="Name"
+                        label="Nombre y apellido"
                         variant="outlined"
                         name='name'
                         value={values.name}
@@ -86,7 +97,7 @@ export const CartSummary = () => {
                         margin='dense'
                         className='input-Email'
                         id="outlined-basic"
-                        label="Phone"
+                        label="Numero de telefono"
                         variant="outlined"
                         name='phone'
                         value={values.phone}
@@ -102,15 +113,22 @@ export const CartSummary = () => {
                         value={values.email}
                         onChange={handleOnChange} />
 
+                    <TextField
+                        margin='dense'
+                        className='input-Number'
+                        id="outlined-basic"
+                        label="reEmail"
+                        variant="outlined"
+                        name='reEmail'
+                        value={values.reEmail}
+                        onChange={handleOnChange} />
+
                     <div className='btn-container'>
-                        <button className='send-btn' onClick={generarOrden} >Finalizar Compra</button>
+                        {values.name.length && values.phone.length && values.email.length && values.reEmail.length > 5 ? <button className='send-btn' onClick={generarOrden} >Finalizar Compra</button> : null}
                     </div>
                 </form>
                 {purchaseID && <MessageOrder purchaseID={purchaseID} />}
             </div>
-
-
-
         </div>
     )
 }

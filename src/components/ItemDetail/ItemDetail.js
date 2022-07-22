@@ -16,9 +16,7 @@ const ItemDetail = ({ item }) => {
     return (
 
         <div className='wrapper'>
-            <div className='product-img' id={item.id} key={item.id}>
-                <img className='cart-img' src={item.Url} height={410} width={300} alt='avatar' />
-            </div>
+            <img className='cart-img' src={item.Url} alt='avatar' />
             <div className='product-info'>
                 <div className='product-text'>
                     <h3 className='product-h3'>{item.name}</h3>

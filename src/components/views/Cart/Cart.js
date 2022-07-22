@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartSummary } from '../../cartSummary/cartSummary.js';
 import { CartContext } from '../../Context/CartContext.js';
 import './Cart.css'
@@ -8,15 +8,21 @@ const Cart = () => {
 
     const [cartList, addCart, cantidadItems, totalPrice, clear, eliminarItem] = useContext(CartContext);
 
+    const [summary, setSummary] = useState(false);
+
+
+    function changeBoolean() {
+        setSummary(summary => !summary);
+        console.log(summary)
+    }
+
+
     return (
         <div>
-            <h1>Cart</h1>
+            <h1>Carrito</h1>
             {cartList.map((item, indice) => (
                 <div className='wrapperCart' key={item.id}>
-
-                    <div className='productImgCart'>
-                        <img src={item.Url} height={420} width={300} alt='imagen' />
-                    </div>
+                    <img className='imgCart' src={item.Url} alt='imagen' />
                     <div className='productInfoCart'>
                         <div className='productTexCart'>
                             <h3 className='productH3Cart'>{item.name}</h3>
@@ -24,15 +30,16 @@ const Cart = () => {
                             <p className='textoCart'>Cantidad: {item.quantity}</p>
                         </div>
                         <div className='product-price-btn-cart'>
-
-                            <button className='noselect' onClick={() => eliminarItem(item.id)}>X</button>
+                            <button className='noselect' onClick={() => eliminarItem(item.id)}>Eliminar</button>
                         </div>
                     </div>
                 </div>
             ))}
-            <div><CartSummary /></div>
+            <div style={{ margin: 15 }}>
+                <button className='CheckOut-btn' setSummary={true} onClick={changeBoolean}>Check Out</button>
+                {summary && <CartSummary style={{ display: 'block' }} />}
+            </div>
         </div>
-
     )
 }
 

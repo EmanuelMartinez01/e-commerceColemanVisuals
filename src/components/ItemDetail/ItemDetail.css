@@ -1,23 +1,26 @@
 .wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 410px;
-  width: 627px;
-  margin: 50px auto;
+  height: 30vw;
+  width: 60%;
   border-radius: 7px 7px 7px 7px;
   -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  margin-left: 20%;
+  margin-top: 10%;
 }
 
 .product-img {
   display: flex;
   position: relative;
+  width: 100%;
 }
 
 .cart-img {
   border-radius: 7px 0 0 7px;
+  height: 100%;
+  width: 40%;
 }
 
 .product-img product-content {
@@ -29,22 +32,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  float: left;
-  height: 410px;
-  width: 327px;
+  height: 100%;
+  width: 40%;
   border-radius: 0 7px 7px 0px;
   background-color: #fff;
+  margin-left: 10%;
 }
 
-.product-text {
-  height: 300px;
-  width: 327px;
-}
 
 .product-text .product-h3 {
-  margin: 0 0 0 38px;
-  padding-top: 52px;
-  font-size: 34px;
+  margin: 0 0 0 0;
+  font-size: 3vw;
   color: #474747;
 }
 
@@ -54,8 +52,8 @@
 }
 
 .product-text .product-h4 {
-  margin: 0 0 47px 38px;
-  font-size: 13px;
+  margin: 0 0 0 0;
+  font-size: 1vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -64,19 +62,20 @@
 }
 
 .product-text .price {
-  height: 125px;
   font-family: 'Playfair Display', serif;
   color: #8d8d8d;
   line-height: 1.7em;
-  font-size: 15px;
+  font-size: 1.2vw;
   font-weight: lighter;
-  overflow: hidden;
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .product-price-btn {
-  height: 103px;
-  width: 327px;
-  margin-top: 17px;
   position: relative;
 }
 
@@ -96,25 +95,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 5vw;
   font-family: 'Suranna', serif;
-  font-size: 34px;
+  font-size: 3vw;
 }
 
 .product-price-btn button {
-  float: right;
-  display: inline-block;
-  height: 50px;
-  width: 176px;
-  margin: 0 20px 0;
+  height: 5vw;
+  margin: 0 30% 0;
   box-sizing: border-box;
   border: transparent;
-  border-radius: 60px;
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
   color: #ffffff;
   background-color: #474747;
   cursor: pointer;

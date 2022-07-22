@@ -1,9 +1,8 @@
 .wrapperCart {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 420px;
-  width: 627px;
+  height: 30vw;
+  width: 65%;
   margin: 50px auto;
   border-radius: 7px 7px 7px 7px;
   -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
@@ -11,35 +10,29 @@
   box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
 
-.productImgCart {
-  float: left;
-  overflow: hidden;
-  height: 420px;
-  width: 300px;
+.imgCart {
+  height: 100%;
+  width: 50%;
 }
 
-.productImgCart {
-  border-radius: 7px 0 0 7px;
-}
 
 .productInfoCart {
   display: flex;
   flex-direction: column;
-  height: 420px;
-  width: 327px;
+  justify-content: space-between;
+  width: 50%;
   border-radius: 0 7px 10px 7px;
   background-color: #ffffff;
 }
 
 .productTexCart {
-  height: 300px;
-  width: 327px;
+  width: 100%;
 }
 
 .productTexCart .productH3Cart {
-  margin: 0 0 0 38px;
-  padding-top: 52px;
-  font-size: 34px;
+  margin: 0 0 0 0;
+  padding-top: 4vw;
+  font-size: 5vw;
   color: #474747;
 }
 
@@ -49,8 +42,8 @@
 }
 
 .productTexCart .productH4Cart {
-  margin: 0 0 47px 38px;
-  font-size: 13px;
+  margin: 0 0 4vw 0;
+  font-size: 1.2vw;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -59,22 +52,11 @@
 }
 
 .productTexCart .textoCart {
-  height: 125px;
-  margin: 0 0 0 38px;
+  margin: 0 0 0 0;
   font-family: 'Playfair Display', serif;
   color: #8d8d8d;
   line-height: 1.7em;
-  font-size: 15px;
-  font-weight: lighter;
-  overflow: hidden;
-}
-
-.productTexCart .price1 {
-  height: 125px;
-  font-family: 'Playfair Display', serif;
-  color: #8d8d8d;
-  line-height: 1.7em;
-  font-size: 15px;
+  font-size: 1.3vw;
   font-weight: lighter;
   overflow: hidden;
 }
@@ -83,40 +65,36 @@
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 0 0 0 38px;
 }
 
-.product-price-btn-cart .price1 {
-  display: inline-block;
-  position: absolute;
-  top: -13px;
-  height: 50px;
-  font-family: 'Trocchi', serif;
-  margin: 0 0 0 38px;
-  font-size: 28px;
-  font-weight: lighter;
-  color: #474747;
-}
-
-.price-span1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  font-family: 'Suranna', serif;
-  font-size: 34px;
-}
 
 .noselect {
-  width: 60px;
-  height: 60px;
+  width: 18vw;
+  height: 6vw;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 50%;
+  border-radius: 2%;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   background: #e62222;
   color: #fff;
+  font-size: 1.5vw;
+}
+
+
+.CheckOut-btn {
+  width: 18vw;
+  height: 6vw;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 2%;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  background: #474747;
+  color: #fff;
+  font-size: 1.5vw;
 }
