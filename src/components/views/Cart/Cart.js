@@ -19,7 +19,7 @@ const Cart = () => {
 
     return (
         <div>
-            <h1>Carrito</h1>
+            <h1 className='textTitleCart'>Carrito</h1>
             {cartList.map((item, indice) => (
                 <div className='wrapperCart' key={item.id}>
                     <img className='imgCart' src={item.Url} alt='imagen' />

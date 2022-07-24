@@ -47,9 +47,10 @@ form {
 }
 
 .text-Resumen {
-  margin: 0 2vw;
-  padding-top: 1vw;
-  font-size: 2.3vw;
+  font-size: 3vw;
+  font-weight: 400;
+  padding-top: 2vw;
+  margin-bottom: 1vw;
 }
 
 .btn-container {
