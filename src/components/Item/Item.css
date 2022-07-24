@@ -69,7 +69,8 @@
   bottom: 0.5vw;
   margin: 0%;
   text-align: center;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bolder;
 }
 
 .card .details h2 {
@@ -81,7 +82,7 @@
   text-transform: uppercase;
 }
 
-.card .details h2 span {
+.card .details h2 .text--span {
   font-weight: 500;
   font-size: 1.2vw;
   color: #f38695;

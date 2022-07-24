@@ -79,22 +79,24 @@
 
   .nav-menu.active {
     display: block;
-    background: rgb(218, 214, 214);
+    background: rgb(255, 254, 254);
     top: 80px;
     left: 0;
     opacity: 0.9;
     transition: all 0.5s ease;
     z-index: 2;
-    border-radius: 0 0 6% 6%;
+    border-radius: 0 0 0 0;
+
   }
 
   .nav-links {
     text-align: center;
-    padding: 2rem;
+    padding: 1.2vw;
     width: 100%;
     display: table;
     font-weight: bold;
-    font-size: 2.5vw;
+    font-size: 2.8vw;
+    margin-bottom: 1.2vw;
   }
 
   .nav-links:hover {
@@ -116,28 +118,5 @@
   .fa-times {
     color: black;
     font-size: 2rem;
-  }
-
-  .nav-links-mobile {
-    display: block;
-    text-align: center;
-    padding: 1.5rem;
-    margin: 2rem auto;
-    border-radius: 4px;
-    width: 80%;
-    background: #1888ff;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-  }
-
-  .nav-links-mobile:hover {
-    background: #fff;
-    color: black;
-    transition: 250ms;
-  }
-
-  button {
-    display: none;
   }
 }

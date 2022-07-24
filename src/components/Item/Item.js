@@ -14,7 +14,7 @@ const Item = ({ items }) => {
                     <div className="details">
                         <h2>{items.name} </h2>
                         <br></br>
-                        <span>{items.detail}</span>
+                        <span className='text--span'>{items.detail}</span>
                     </div>
                 </div>
             </div>
