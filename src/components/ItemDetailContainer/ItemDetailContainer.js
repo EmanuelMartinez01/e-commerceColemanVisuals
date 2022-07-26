@@ -1,27 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail.js'
 import { useParams } from 'react-router-dom';
-import { getProductById } from '../../Data/Data';
-
+import { getProductById, data } from '../../Data/Data';
+import { IdNotExist } from '../IdNotExist/IdNotExist.js';
 
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
+
+    const [idItem, setIdItem] = useState();
+
     let { id } = useParams();
 
     useEffect(() => {
+        if (id > data.length) {
+            console.log("Producto no existe")
 
-        getProductById(id)
-            .then(res => {
-                setItem(res);
-            })
+        } else {
+            getProductById(id)
+                .then(res => {
+                    setItem(res);
+                    setIdItem(id)
+                })
+        }
+
 
     }, [id]);
 
 
     return (
         <div className='ItemListContainer'>
-            <ItemDetail item={item} />
+            {idItem ? <ItemDetail item={item} /> : <IdNotExist />}
         </div >
     );
 };
