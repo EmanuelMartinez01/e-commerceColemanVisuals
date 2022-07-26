@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+
 .navbar {
   border-top: 6px solid black;
   background: #fff;
@@ -32,6 +35,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 1.5vw;
+  font-weight: 500;
 }
 
 .nav-links:hover {
@@ -42,6 +46,7 @@
 
 .fas.fa-caret-down {
   margin-left: 0.5vw;
+  padding-top: 0.3vw;
 }
 
 .fa-bars {
@@ -113,6 +118,7 @@
     display: block;
     font-size: 1.8rem;
     cursor: pointer;
+    padding-right: 2vw;
   }
 
   .fa-times {

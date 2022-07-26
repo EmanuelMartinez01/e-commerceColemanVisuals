@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 const MessageOrder = ({ purchaseID }) => {
     return (
         <Stack sx={{ width: '100%' }} spacing={2}>
-            <Alert severity="success"> Gracias por tu compra! Tu id de transaccion es: {purchaseID}
+            <Alert severity="success">Thanks for your purchase! Your transaction id is: {purchaseID}
             </Alert>
         </Stack>
     )

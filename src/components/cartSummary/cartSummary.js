@@ -71,7 +71,7 @@ export const CartSummary = () => {
     return (
         <div className='cartSummary'>
             {errorMail && <ErrorMessage />}
-            <h2 className='text-Resumen'>Resumen</h2>
+            <h2 className='text-Resumen'>Summary</h2>
             <div className='cart-Resumen'>
                 {cartList.map((item, idx) => (
                     <OrderItem items={item} key={idx} />
@@ -80,14 +80,14 @@ export const CartSummary = () => {
             <div>
                 <p className='priceSummary'><span className='priceSpanSummary'>Total: ${totalPrice()}</span></p>
             </div>
-            <h3 className='text-Resumen'>Contacto</h3>
+            <h3 className='text-Resumen'>Contact</h3>
             <div>
                 <form onSubmit={onSubmit}>
                     <TextField
                         margin='dense'
                         className='input-Name'
                         id="outlined-basic"
-                        label="Nombre y apellido"
+                        label="Name and Lastname"
                         variant="outlined"
                         name='name'
                         value={values.name}
@@ -95,9 +95,9 @@ export const CartSummary = () => {
 
                     <TextField
                         margin='dense'
-                        className='input-Email'
+                        className='input-Number'
                         id="outlined-basic"
-                        label="Numero de telefono"
+                        label="Number"
                         variant="outlined"
                         name='phone'
                         value={values.phone}
@@ -105,7 +105,7 @@ export const CartSummary = () => {
 
                     <TextField
                         margin='dense'
-                        className='input-Number'
+                        className='input-Email'
                         id="outlined-basic"
                         label="Email"
                         variant="outlined"
@@ -117,7 +117,7 @@ export const CartSummary = () => {
                         margin='dense'
                         className='input-Number'
                         id="outlined-basic"
-                        label="reEmail"
+                        label="Repeat your email"
                         variant="outlined"
                         name='reEmail'
                         value={values.reEmail}

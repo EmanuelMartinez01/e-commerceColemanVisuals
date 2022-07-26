@@ -48,13 +48,12 @@
 
 .product-text .product-h3,
 .product-price-btn p {
-  font-family: 'Bentham', serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 .product-text .product-h4 {
   margin: 0 0 0 0;
   font-size: 1vw;
-  font-family: 'Raleway', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   color: #d2d2d2;
@@ -62,7 +61,6 @@
 }
 
 .product-text .price {
-  font-family: 'Playfair Display', serif;
   color: #8d8d8d;
   line-height: 1.7em;
   font-size: 1.2vw;
@@ -84,7 +82,6 @@
   position: absolute;
   top: -13px;
   height: 50px;
-  font-family: 'Trocchi', serif;
   margin: 0 0 0 38px;
   font-size: 28px;
   font-weight: lighter;
@@ -96,7 +93,6 @@
   align-items: center;
   justify-content: center;
   height: 5vw;
-  font-family: 'Suranna', serif;
   font-size: 3vw;
 }
 
@@ -105,7 +101,6 @@
   margin: 0 30% 0;
   box-sizing: border-box;
   border: transparent;
-  font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #474747;

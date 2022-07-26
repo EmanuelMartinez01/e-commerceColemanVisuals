@@ -1,0 +1,31 @@
+.containerNotExist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4vw;
+}
+
+.textNotExist {
+    font-size: 2vw;
+}
+
+
+.btnNotExits {
+    width: 18vw;
+    height: 6vw;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 2%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background: #474747;
+    color: #fff;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+
+.textLink {
+    text-decoration: none;
+}
