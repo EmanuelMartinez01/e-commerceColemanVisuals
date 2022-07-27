@@ -36,7 +36,7 @@ const Cart = () => {
                 </div>
             ))}
             <div style={{ margin: 15 }}>
-                <button className='CheckOut-btn' setSummary={true} onClick={changeBoolean}>Check Out</button>
+                <button className='CheckOut-btn' setSummary={true} onClick={changeBoolean}>Checkout</button>
                 {summary && <CartSummary style={{ display: 'block' }} />}
             </div>
         </div>
