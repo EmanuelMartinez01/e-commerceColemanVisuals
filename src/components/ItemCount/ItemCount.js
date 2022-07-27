@@ -37,7 +37,7 @@ const ItemCount = ({ stock, min, onAdd }) => {
             <button className='btn-count' onClick={handlerCounterMinus}>-</button>
             <div className='celda-count'>{counter}</div>
             <button className='btn-count' onClick={handlerCounterUp}>+</button>
-            <button className='btn-cart' onClick={() => onAdd(counter)}><ShoppingCartOutlinedIcon style={{ fontSize: "2vw" }} /></button>
+            <button className='btn-cart' onClick={() => onAdd(counter)}><ShoppingCartOutlinedIcon style={{ fontSize: "1.8vw" }} /></button>
         </div>
 
     )

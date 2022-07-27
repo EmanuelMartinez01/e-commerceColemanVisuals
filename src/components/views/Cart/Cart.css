@@ -1,8 +1,8 @@
 .wrapperCart {
   display: flex;
   align-items: center;
-  height: 30vw;
-  width: 65%;
+  height: 25vw;
+  width: 45%;
   margin: 50px auto;
   border-radius: 7px 7px 7px 7px;
   -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
@@ -38,7 +38,7 @@
 .productTexCart .productH3Cart {
   margin: 0 0 0 0;
   padding-top: 4vw;
-  font-size: 5vw;
+  font-size: 3vw;
   color: #474747;
 }
 
@@ -54,6 +54,7 @@
   text-transform: uppercase;
   color: #d2d2d2;
   letter-spacing: 0.2em;
+  padding-bottom: 2vw;
 }
 
 .productTexCart .textoCart {
@@ -63,18 +64,20 @@
   font-size: 1.3vw;
   font-weight: lighter;
   overflow: hidden;
+  padding-bottom: 1vw;
 }
 
 .product-price-btn-cart {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 1vw;
 }
 
 
 .noselect {
-  width: 18vw;
-  height: 6vw;
+  width: 12vw;
+  height: 4vw;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -89,8 +92,8 @@
 
 
 .CheckOut-btn {
-  width: 18vw;
-  height: 6vw;
+  width: 12vw;
+  height: 5vw;
   cursor: pointer;
   display: inline-flex;
   align-items: center;

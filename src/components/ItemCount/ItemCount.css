@@ -7,7 +7,7 @@
 }
 
 .celda-count {
-  font-size: 1.8vw;
+  font-size: 2.5vw;
   color: #474747;
   font-weight: bold;
 }
@@ -16,16 +16,16 @@
 .btn-count {
   display: flex;
   border-radius: 50%;
-  padding: 2.2vw;
+  padding: 2vw;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 1.3vw;
+  font-size: 1vw;
 }
 
 .btn-cart {
   border-radius: 50%;
-  padding: 1.5vw;
+  padding: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,4 +49,59 @@
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
+}
+
+@media screen and (min-width: 960px) {
+  .ItemCount {
+    width: 15%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1vw;
+  }
+
+  .celda-count {
+    font-size: 1.8vw;
+    color: #474747;
+    font-weight: bold;
+  }
+
+
+  .btn-count {
+    display: flex;
+    border-radius: 50%;
+    padding: 1.4vw;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1vw;
+  }
+
+  .btn-cart {
+    border-radius: 50%;
+    padding: 1.1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .btn-count :hover,
+  .btn-count :focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .btn-count :hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-count :active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+  }
 }

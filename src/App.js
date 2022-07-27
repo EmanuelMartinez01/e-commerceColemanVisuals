@@ -11,8 +11,6 @@ import { ProductProvider } from './components/Context/CartContext'
 import { Contact } from './components/views/Contact/Contact';
 import CategoryList from './components/views/CategoryList/CategoryList';
 import Sessions from './components/views/Sessions/Sessions';
-import Footer from './components/Footer/Footer';
-
 
 
 
@@ -34,7 +32,6 @@ function App() {
 						<Route path='/categorylist/:category' element={<CategoryList />} />
 						<Route path='/contact' element={<Contact />} />
 					</Routes>
-					<Footer />
 				</div>
 			</Router>
 		</ProductProvider>
