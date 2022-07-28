@@ -176,7 +176,16 @@ El proyecto esta ubicado en la carpeta "E-COMMERCEEMANUELMARTINEZ" contiene 4 ca
     Carpeta con un componente js que contiene un array de objetos. Productos como: ID, name, precio, URL, category, stock, detail, quantity, categoryId.
 
     Librerias: 
-        -react-router-dom
+        Las librerias que se encuentran en uso son actualmente utilizadas en el proyecto final o pueden haber quedado instaladas desde que se comenzo el proyecto al inicio de la cursada.
+
+        -react: Es muy importante para hacer un proyecto en React JS ya que nos permite hacer casi todo lo relacionado con React JS.
+        -react-router-dom: Libreria que nos permite utilizar page routing lo cual es bastante importante. Aca los elementos: BrowserRouter, Routes, Route y Link.
+
+        -Material UI: Libreria de componentes que utilice para los componentes <OrderSummary/> <ErrorMessage/> y <CardWidget/> 
+        Use alertas y iconos.
+
+        -axios: Se uso en algun momento de la cursada para llamar a una API a traves del metodo FETCH, actualmente no esta en uso en la App se bien que lo correcto seria eliminarlo pero quisiera dejarlo para ayudarme en un futuro.
+
 
    
 
