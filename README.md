@@ -172,8 +172,6 @@ El proyecto esta ubicado en la carpeta "E-COMMERCEEMANUELMARTINEZ" contiene 4 ca
 
 
 
-
-
     "Data": 
     Carpeta con un componente js que contiene un array de objetos. Productos como: ID, name, precio, URL, category, stock, detail, quantity, categoryId.
 
@@ -184,3 +182,4 @@ El proyecto esta ubicado en la carpeta "E-COMMERCEEMANUELMARTINEZ" contiene 4 ca
 
 
 
+Video del uso de la App: [![Alt text](https://img.youtube.com/vi/lBoBEqI4-LM/0.jpg)](https://www.youtube.com/watch?v=lBoBEqI4-LM)
