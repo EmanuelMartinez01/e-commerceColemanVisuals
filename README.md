@@ -191,4 +191,6 @@ El proyecto esta ubicado en la carpeta "E-COMMERCEEMANUELMARTINEZ" contiene 4 ca
 
 
 
-Video del uso de la App: [![Alt text](https://img.youtube.com/vi/lBoBEqI4-LM/0.jpg)](https://www.youtube.com/watch?v=lBoBEqI4-LM)
+Video del uso de la App: 
+    https://user-images.githubusercontent.com/95369230/181657348-d902c9af-1aca-4af7-8a20-bbf346c8be3e.mp4
+
